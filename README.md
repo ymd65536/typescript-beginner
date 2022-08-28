@@ -165,3 +165,15 @@ const PC3:PC = {
   OSType:OS.Linux
 };
 ```
+
+## JSON型推論
+
+JSON文字列をimportしてtypeof をするとそのJSONに合致した変数を作成する。具体例
+
+```ts
+import Data from "./data.json";
+
+// JSON型推論
+type USERS = typeof Data;
+
+```
