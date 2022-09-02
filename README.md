@@ -20,7 +20,7 @@ npm start
 yarn start
 ```
 
-## TypeScript を 実行する
+## TypeScript を 実行する(セットアップ)
 
 ```bash
 npm install -g typescript ts-node
