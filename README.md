@@ -20,6 +20,12 @@ npm start
 yarn start
 ```
 
+## TypeScript を 実行する
+
+```bash
+npm install -g typescript ts-node
+```
+
 ## データ　型
 
 文字列型:string
