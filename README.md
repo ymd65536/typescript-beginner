@@ -26,6 +26,49 @@ yarn start
 npm install -g typescript ts-node
 ```
 
+## TypeScript を 補完できるようにする
+
+型定義ファイルを読み込むとTypeScriptに対応したエディターでコード補完が効くメリットもあるとのことなので
+`npm install` でインストールを実行する。
+
+```bash
+npm install -g types
+```
+
+## TypeScript の実行環境構築と補完のセットアップコンフィグ
+
+一例
+
+```json
+{
+  "dependencies": {
+    "typescript": "^4.6.3",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  },
+  "private": true
+}
+```
+
+## TypeScript のトランスパイルの設定
+
+TypeScriptのトランスパイルには種類がある。
+そもそも、TypeScriptはJavaScriptのスーパーセットであることからコンパイラはその種類に依存する形になると思われる。
+つまり、JavaScriptの仕様に合わせる形になるので`CommonJS`か`ESM`のどちらかを選ぶことができる。
+
+設定はtsconfig.jsonで設定できる。
+
+```json
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "strict": true,
+  }
+}
+```
+
 ## データ　型
 
 文字列型:string
